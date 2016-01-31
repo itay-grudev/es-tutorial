@@ -3,7 +3,7 @@ class Page < ActiveRecord::Base
   include Elasticsearch::Model::Callbacks
 
   index_name Rails.application.class.parent_name.underscore
-  document_type 'page'
+  document_type self.new.class.name.downcase
 
   settings index: { number_of_shards: 1 } do
     mapping dynamic: false do

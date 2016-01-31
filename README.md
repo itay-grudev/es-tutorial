@@ -21,7 +21,7 @@ It is important to have Elastic Search running prior to running `rake db:seed`
 as it will also appropriately index the data in ES.
 
 ```bash
-elasticsearch >/devnull </dev/null &
+elasticsearch >/dev/null </dev/null &
 rake db:seed
 ```
 

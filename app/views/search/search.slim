@@ -13,7 +13,7 @@ h1 ES Search Demo
       - if @results.respond_to? :took
         small = 'performed in ' + ( @results.took.to_f / 1000 ).to_s + ' seconds'
   
-  - if @results.respond_to? :response and (suggestion = autosuggest_aggregate(@results.response.suggest, params[:query]))
+  - if @results.respond_to? :response and (suggestion = autosuggest_aggregate(@results.response.suggest, [:title, :body], params[:query]))
     p
       | Search instead for: 
       = link_to suggestion, search_path( query: suggestion )

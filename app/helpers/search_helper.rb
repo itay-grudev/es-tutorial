@@ -1,11 +1,11 @@
 module SearchHelper
 
-  def autosuggest_aggregate(response, query)
+  def autosuggest_aggregate(response, fields, query)
     # Stores unique words and their autocorrect suggestions
     words = { }
 
     # Itterate over fields
-    [:title, :body, :tags].each do |field|
+    fields.each do |field|
       # Itterate over query words
       response.send(field).to_a.each do |word|
         # If any options are available

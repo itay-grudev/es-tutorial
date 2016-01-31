@@ -4,9 +4,9 @@ module SearchHelper
     # Stores unique words and their autocorrect suggestions
     words = { }
 
-    # Itterate over fields
+    # Iterate over fields
     fields.each do |field|
-      # Itterate over query words
+      # Iterate over query words
       response.send(field).to_a.each do |word|
         # If any options are available
         if word.options.length > 0

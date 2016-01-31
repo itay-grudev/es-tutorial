@@ -1,0 +1,59 @@
+Ruby (programming language)
+Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
+According to its creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp. It supports multiple programming paradigms, including functional, object-oriented, and imperative. It also has a dynamic type system and automatic memory management.
+History
+Early concept
+Ruby was conceived on February 24, 1993. In a 1999 post to the ruby-talk mailing list, Ruby author Yukihiro Matsumoto describes some of his early ideas about the language:
+I was talking with my colleague about the possibility of an object-oriented scripting language. I knew Perl (Perl4, not Perl5), but I didn't like it really, because it had the smell of a toy language (it still has). The object-oriented language seemed very promising. I knew Python then. But I didn't like it, because I didn't think it was a true object-oriented language — OO features appeared to be add-on to the language. As a language maniac and OO fan for 15 years, I really wanted a genuine object-oriented, easy-to-use scripting language. I looked for but couldn't find one. So I decided to make it.
+Matsumoto describes the design of Ruby as being like a simple Lisp language at its core, with an object system like that of Smalltalk, blocks inspired by higher-order functions, and practical utility like that of Perl.
+The name "Ruby" originated during an online chat session between Matsumoto and Keiju Ishitsuka on February 24, 1993, before any code had been written for the language. Initially two names were proposed: "Coral" and "Ruby". Matsumoto chose the latter in a later e-mail to Ishitsuka. Matsumoto later noted a factor in choosing the name "Ruby" – it was the birthstone of one of his colleagues.
+First publication
+The first public release of Ruby 0.95 was announced on Japanese domestic newsgroups on December 21, 1995.[20] Subsequently three more versions of Ruby were released in two days. The release coincided with the launch of the Japanese-language ruby-list mailing list, which was the first mailing list for the new language.
+Already present at this stage of development were many of the features familiar in later releases of Ruby, including object-oriented design, classes with inheritance, mixins, iterators, closures, exception handling and garbage collection.
+Early releases
+MAJOR: Increased when incompatible change which can’t be released in MINOR. Reserved for special events. 	MAJOR: Increased when you make incompatible API changes.
+MINOR: increased every christmas, may be API incompatible. 	MINOR: increased when you add functionality in a backwards-compatible manner.
+TEENY: security or bug fix which maintains API compatibility. May be increased more than 10 (such as 2.1.11), and will be released every 2–3 months. 	PATCH: increased when you make backwards-compatible bug fixes.
+PATCH: number of commits since last MINOR release (will be reset at 0 when releasing MINOR). 	-
+Semantic versioning also provides additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format, not available at Ruby.
+Ruby 2.2.0 was released on Christmas Day in 2014. The release includes speed-ups, bugfixes, and library updates and removes some deprecated APIs. Most notably, Ruby 2.2.0 introduces changes to memory handling - an incremental garbage collector, support for garbage collection of symbols and the option to compile directly against jemalloc. It also contains experimental support for using vfork(2) with system() and spawn(), and added support for the Unicode 7.0 specification.
+Features that were made obsolete or removed include callcc, the DL library, Digest::HMAC, lib/rational.rb, lib/complex.rb, GServer, Logger::Application as well as various C API functions.
+Ruby 2.3.0 was released on December 25, 2015. A few notable changes include:
+The ability to mark all strings literals as frozen by default with consequently large performance increase in string operations
+Hash comparison to allow direct checking of key/value pairs instead of just keys
+A new safe navigation operator &. that can ease nil handling (e.g. instead of if obj && obj.foo && obj.bar, we can use obj&.foo&.bar)
+The did_you_mean gem is now bundled by default and required on startup to automatically suggest similar name matches on a NameError or NoMethodError
+Hash#dig and Array#dig to easily extract deeply nested values (e.g. given profile = { social: { wikipedia: { name: 'Foo Baz' } } }, the value Foo Baz can now be retrieved by profile.dig(:social, :wikipedia, :name))
+.grep_v(regexp) which will match all negative examples of a given regular expression in addition to other new features.
+The 2.3 branch also includes many performance improvements, updates, and bugfixes including changes to Proc#call, Socket and IO use of of exception keywords, Thread#name handling, default passive Net::FTP connections, and Rake being removed from stdlib.
+Philosophy
+Matsumoto has said that Ruby is designed for programmer productivity and fun, following the principles of good user interface design. At a Google Tech Talk in 2008 Matsumoto further stated, "I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy. That is the primary purpose of Ruby language." He stresses that systems design needs to emphasize human, rather than computer, needs:
+Often people, especially computer engineers, focus on the machines. They think, "By doing this, the machine will run fast. By doing this, the machine will run more effectively. By doing this, the machine will something something something." They are focusing on machines. But in fact we need to focus on humans, on how humans care about doing programming or operating the application of the machines. We are the masters. They are the slaves.
+Ruby is said to follow the principle of least astonishment (POLA), meaning that the language should behave in such a way as to minimize confusion for experienced users. Matsumoto has said his primary design goal was to make a language that he himself enjoyed using, by minimizing programmer work and possible confusion. He has said that he had not applied the principle of least astonishment to the design of Ruby, but nevertheless the phrase has come to be closely associated with the Ruby programming language. The phrase has itself been a source of surprise, as novice users may take it to mean that Ruby's behaviors try to closely match behaviors familiar from other languages. In a May 2005 discussion on the newsgroup comp.lang.ruby, Matsumoto attempted to distance Ruby from POLA, explaining that because any design choice will be surprising to someone, he uses a personal standard in evaluating surprise. If that personal standard remains consistent, there would be few surprises for those familiar with the standard.
+Matsumoto defined it this way in an interview:
+Everyone has an individual background. Someone may come from Python, someone else may come from Perl, and they may be surprised by different aspects of the language. Then they come up to me and say, 'I was surprised by this feature of the language, so Ruby violates the principle of least surprise.' Wait. Wait. The principle of least surprise is not for you only. The principle of least surprise means principle of least my surprise. And it means the principle of least surprise after you learn Ruby very well. For example, I was a C++ programmer before I started designing Ruby. I programmed in C++ exclusively for two or three years. And after two years of C++ programming, it still surprises me.
+Features
+Thoroughly object-oriented with inheritance, mixins and metaclasses[60]
+Dynamic typing and duck typing
+Everything is an expression (even statements) and everything is executed imperatively (even declarations)
+Succinct and flexible syntax that minimizes syntactic noise and serves as a foundation for domain-specific languages
+Dynamic reflection and alteration of objects to facilitate metaprogramming
+Lexical closures, iterators and generators, with a unique block syntax
+Literal notation for arrays, hashes, regular expressions and symbols
+Embedding code in strings (interpolation)
+Default arguments
+Four levels of variable scope (global, class, instance, and local) denoted by sigils or the lack thereof
+Garbage collection
+First-class continuations
+Strict boolean coercion rules (everything is true except false and nil)
+Exception handling
+Operator overloading
+Built-in support for rational numbers, complex numbers and arbitrary-precision arithmetic
+Custom dispatch behavior (through method_missing and const_missing)
+Native threads and cooperative fibers (fibers are 1.9/YARV feature)
+Initial support for Unicode and multiple character encodings (no ICU support)
+Native plug-in API in C
+Interactive Ruby Shell (a REPL)
+Centralized package management through RubyGems
+Implemented on all major platforms
+Large standard library, including modules for YAML, JSON, XML, CGI, OpenSSL, HTTP, FTP, RSS, curses, zlib, and Tk

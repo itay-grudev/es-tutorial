@@ -2,7 +2,7 @@ ES-Tutorial
 ===========
 
 This repository is a sample application for my Elastic Search with Ruby on Rails
-article published on [tutorials.pluralsight.com][1]
+tutorial published on [tutorials.pluralsight.com][1]
 
 How to set it up
 ----------------
@@ -25,7 +25,7 @@ elasticsearch >/dev/null </dev/null &
 rake db:seed
 ```
 
-[1]: http://tutorials.pluralsight.com
+[1]: http://tutorials.pluralsight.com/review/elastic-search-with-ruby-on-rails
 
 License
 -------

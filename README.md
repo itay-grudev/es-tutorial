@@ -25,7 +25,7 @@ elasticsearch >/dev/null </dev/null &
 rake db:seed
 ```
 
-[1]: http://tutorials.pluralsight.com/review/elastic-search-with-ruby-on-rails
+[1]: http://tutorials.pluralsight.com/review/elasticsearch-with-ruby-on-rails
 
 License
 -------
